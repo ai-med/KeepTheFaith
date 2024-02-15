@@ -1,0 +1,14 @@
+_target_: torchktf.modules.standard.StandardModule
+
+lr: 0.001
+weight_decay: 0.0
+validation_metric: val/bacc_best
+num_classes: ${datamodule.metadata.num_classes}
+
+net:
+  _target_: torchktf.networks.convnets.ConvNet
+  in_channels: ${datamodule.metadata.num_channels}
+  n_outputs: ${datamodule.metadata.num_classes}
+  n_basefilters: 64
+  n_blocks: 4
+  layer_size: 2

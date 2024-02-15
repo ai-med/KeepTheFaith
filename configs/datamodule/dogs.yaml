@@ -1,0 +1,9 @@
+_target_: torchktf.datamodule.dogs.DogsDataModule
+
+data_dir: ${data_dir}/dogs
+batch_size: 128
+num_workers: 10
+fold: ${fold}
+metadata:
+  num_channels: 3
+  num_classes: 120

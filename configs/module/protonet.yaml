@@ -1,0 +1,30 @@
+_target_: torchktf.modules.ktf.KeepTheFaith
+
+validation_metric: val/bacc_save
+num_classes: ${datamodule.metadata.num_classes}
+enable_checkpointing: True
+monitor_prototypes: False
+enable_save_embeddings: False
+enable_log_prototypes: False
+lr: 0.0001
+lr_lastlayer: ${module.lr}
+weight_decay: 0.0
+l_clst: 0.5
+l_sep: 0.5
+epochs_all: 5
+epochs_clf: 10
+epochs_warmup: 10
+
+net:
+  _target_: torchktf.networks.protonet.ProtoNet
+  in_channels: ${datamodule.metadata.num_channels}
+  n_outputs: ${datamodule.metadata.num_classes}
+  n_basefilters: 64
+  n_blocks: 4
+  layer_size: 2
+  block_type: ConvNet
+  optim_features: True
+  n_protos_per_class: 7
+  proto_dims: 256
+  proto_activation_func: linear
+  proto_nonlinearity: relu1

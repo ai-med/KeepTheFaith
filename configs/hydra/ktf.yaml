@@ -1,0 +1,7 @@
+run:
+  dir: results/${name}/seed-${seed}/fold-${fold}/
+job:
+  chdir: True
+sweep:
+  dir: results
+  subdir: ${name}/seed-${seed}/fold-${fold}/model-${module.net.block_type}/lr-${module.lr}/wd-${module.weight_decay}/protochans-${module.net.proto_dims}/nprotos-${module.net.n_protos_per_class}

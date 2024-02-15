@@ -1,0 +1,23 @@
+# @package _global_
+
+# specify here default training configuration
+defaults:
+  - _self_
+  - hydra: ktf.yaml
+  - callbacks: default.yaml
+  - datamodule: birds.yaml
+  - module: protonet.yaml
+  - logger: tensorboard.yaml
+  - trainer: default.yaml
+
+# folder in which data folders are stored
+data_dir: 
+
+# fold to run this experiment for
+fold: 0
+
+# seed for random number generators in pytorch, numpy and python.random
+seed: 25012023
+
+# default name for the experiment, determines logging folder path
+name: debug
