@@ -1,5 +1,36 @@
-[ld-system]
+[build-system]
 requires = [
     "setuptools>=45",
 ]
 build-backend = "setuptools.build_meta"
+
+[project]
+name = "ktf"
+version = "0.0.1"
+description = "Faithful Explanations in Convolutional Neural Networks for Case-Based Reasoning"
+readme = "README.md"
+license = {file = "LICENSE"}
+dependencies = [
+    "pandas",
+    "h5py",
+    "hydra-core",
+    "numpy",
+    "omegaconf",
+    "pytorch_lightning",
+    "torch",
+    "torchmetrics",
+    "opencv-python",
+    "tensorboard",
+]
+requires-python = ">= 3.10"
+classifiers = [
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Programming Language :: Python :: 3",
+]
+
+[project.urls]
+Homepage = "https://github.com/ai-med/KeepTheFaith"
+
+[tool.setuptools.packages.find]
+include = ["torchktf*"]
+namespaces = false
