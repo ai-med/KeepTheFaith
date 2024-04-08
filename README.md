@@ -1,5 +1,6 @@
 # Keep the Faith: Faithful Explanations in Convolutional Neural Networks for Case-Based Reasoning
 
+[![Conference Paper](https://img.shields.io/static/v1?label=DOI&message=10.1609/aaai.v38i6.28406&color=3a7ebb)](https://doi.org/10.1609/aaai.v38i6.28406)
 [![Preprint](https://img.shields.io/badge/arXiv-2312.09783-b31b1b)](https://arxiv.org/abs/2312.09783)
 [![License](https://img.shields.io/badge/license-GPLv3-blue.svg)](LICENSE)
 
